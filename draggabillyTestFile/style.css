@@ -1,0 +1,29 @@
+body { font-family: monospace; }
+
+.container {
+  background-image: url("https://image.ibb.co/bQfaPS/refrigdoor1.jpg");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  overflow: auto;
+  padding: 10px;
+  border: 2px solid #F90;
+
+}
+
+.draggable {
+  font-family: monospace;
+  background: #F90;
+  float: left;
+}
+.draggable.is-pointer-down {
+  background: #09F;
+  z-index: 2; /* above other draggies */
+}
+.draggable.is-dragging { opacity: 0.7; }
