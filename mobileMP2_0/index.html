@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="scripts/jquery-ui-1.12.1/jquery-ui.css">
+      <link rel="stylesheet" href="style.css">
+      <script src="scripts/jquery-3.3.1.js"></script>
+      <script src="scripts/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Boogaloo" rel="stylesheet">
+
+    <title>Mobile Magnetic Poetry 2.0</title>
+  </head>
+  <body>
+
+    <div class="container-fluid" id="droppableDoor" droppable="true">
+      <div class="row"> <!--heading row-->
+        <div class="col-12" id="heading">
+          <h5>Welcome to Magnetic Poetry 2.0</h5>
+        </div>
+      </div>
+      <div class="row" id="droppableD"> <!--top half of refrig-->
+        <div class="col-12">Make droppable area
+        </div>
+      </div>
+      <div class="row" id="draggableD"> <!--bottom half of refrig-->
+        <div class="col-12">Make draggable area where magnets created
+        </div>
+      </div>
+      <div class="row" id="setOptions">
+        <div class="col-4">
+          <form id="chooseSet">
+            <p>Pick A Set:</p>
+            <input type="radio" id="chooseOriginal" name="wordSet" value="originalWordSet" checked/> Original<br>
+            <input type="radio" id="chooseGalvanize" name="wordSet" value="galvanizeWordSet"> Galvanize<br>
+          </form>
+        </div>
+        <div class="col-4">
+          <form id="chooseNumOfWords">
+            <p>Quantity:</p>
+            <input type="radio" id="choose30" name="numWords" value="30" checked>30<br>
+            <input type="radio" id="choose60" name="numWords" value="60">60<br>
+          </form>
+        </div>
+        <div class="col-4">
+          <form id="chooseFont">
+            <p>Font Pref:</p>
+            <input type="radio" id="fontStandard" name="font4set" value="Inconsolata" checked>Standard<br>
+            <input type="radio" id="fontFun" name="font4set" value="Indie Flower">Fun<br>
+          </form>
+        </div>
+      </div>
+    <div class="row" id="buttons">
+      <div class="col-12">
+        <button id="makeNewSet">More Magnets</button>
+        <button id="reset">Reset</button>
+        <button id="saveAndShare">Save & Share</button>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="scripts/draggabilly.pkgd.min.js"></script>
+    <script src="app.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  </body>
+</html>
