@@ -10,6 +10,7 @@ let fontChoice = "Inconsolata";
 let removed = [];
 
 
+
 //declare functions
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -59,7 +60,7 @@ function createMagnets() {
     word.style.width = ((8 * removed[i].length)+10) + "px";
     word.style.backgroundColor = "white";
     word.style.border = "solid 1px black";
-    word.style.boxShadow = " 5px 5px 2px grey";
+    word.style.boxShadow = " 2px 2px 1px grey";
     word.setAttribute("draggable", "true");
     container.appendChild(word);
 
@@ -91,7 +92,7 @@ function createNewMagnetSet(wordLi, size, fontSelection) {
     word.style.width = ((8 * removed[i].length)+10) + "px";
     word.style.backgroundColor = "white";
     word.style.border = "solid 1px black";
-    word.style.boxShadow = " 5px 5px 2px grey";
+    word.style.boxShadow = " 2px 2px 1px grey";
     word.setAttribute("draggable", "true");
     let rDoor = document.querySelector("#container");
     rDoor.appendChild(word);
@@ -105,6 +106,48 @@ function createNewMagnetSet(wordLi, size, fontSelection) {
     para.style.marginBottom = "3px";
     word.appendChild(para);
     }
+    (function() {
+      var draggableElems = document.querySelectorAll('.draggable');
+      // array of Draggabillies
+      var draggies = []
+      // init Draggabillies
+      for ( var i=0, len = draggableElems.length; i < len; i++ ) {
+        var draggableElem = draggableElems[i];
+        var draggie = new Draggabilly( draggableElem, {
+          containment: true
+        });
+        draggies.push( draggie );
+      }
+    })();
+  };
+
+function createCustomMagnet(customWord) {
+    //create custom magnet
+    let word=document.createElement('div');
+        word.style.position = "absolute";
+        word.style.top = getRandomInt(100, 200) +'px';
+        word.style.left = getRandomInt(50, 300) + "px";
+        word.style.zIndex = getRandomInt(0, 4);
+    word.className = "draggable";
+    word.style.height = "30px";
+    word.style.marginBottom = "5px";
+    word.style.width = ((8 * customWord.length)+10) + "px";
+    word.style.backgroundColor = "white";
+    word.style.border = "solid 1px black";
+    word.style.boxShadow = " 2px 2px 1px grey";
+    word.setAttribute("draggable", "true");
+    let rDoor = document.querySelector("#container");
+    rDoor.appendChild(word);
+    //and then create and attach a paragraph element to the custom magnet
+    let para=document.createElement('p');
+    para.innerHTML = customWord;
+    para.style.textAlign = "center";
+    para.style.fontFamily = fontChoice;
+    para.style.paddingTop = "5px";
+    para.style.marginTop = "3px";
+    para.style.marginBottom = "3px";
+    word.appendChild(para);
+
     (function() {
       var draggableElems = document.querySelectorAll('.draggable');
       // array of Draggabillies
@@ -178,6 +221,19 @@ function createNewMagnetSet(wordLi, size, fontSelection) {
             $(".draggable").remove();
             console.log("reset button was clicked");
           });
+
+        // $("#createMagnetButton").on('click', function() {
+        //   var cmText = $("customMagnetText").value;
+        //   console.log("text for customMagnet is ", cmText);
+        //   createCustomMagnet(cmText);
+        // });
+
+        $('#myModal').on('click', '.btn-primary', function(){
+          var value = $('#myPopupInput').val();
+          var cmText=value;
+          console.log("text for magnet is ", cmText);
+          createCustomMagnet(cmText);
+        });
 
 
           //utilize draggabilly library to make magnets draggable
