@@ -1,10 +1,17 @@
 .container-fluid {
-  background-image: url("https://image.ibb.co/fKdBRJ/Screen_Shot_2018_05_09_at_12_05_41_AM.png");
+  background-image: url("https://image.ibb.co/izrqoy/solid_silver.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   height: 725px;
   width: auto;
+}
+
+p {
+  text-align: center;
+  padding-top: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 #heading {
@@ -36,25 +43,12 @@ div.col-4 {
   height: 5%;
 }
 
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-   ...
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  ...
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-   ...
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-   ...
+.first, .additional, .custom {
+  position: absolute;
+  height: 30px;
+  margin-bottom: 5px;
+  background-color: white;
+  border: solid 1px black;
+  box-shadow: 2px 2px 1px grey;
 }
