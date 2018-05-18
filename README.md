@@ -1,4 +1,5 @@
 This app is available online for use at http://www.magneticpoetry2_0.surge.sh.
+The github repository for the laptop version is available at https://github.com/ntmbayfield/g88Q1Project.
 
 The mobile-friendly version of the app is available for use at http://www.mobilemp2_0.surge.sh.
 
