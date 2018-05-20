@@ -67,6 +67,20 @@ function createMagnets() {
         para.style.fontFamily = "Indie Flower";
         word.appendChild(para);
   }
+  //make magnets draggable
+  (function() {
+    var draggableElems = document.querySelectorAll('.draggable');
+    // array of Draggabillies
+    var draggies = []
+    // init Draggabillies
+    for ( var i=0, len = draggableElems.length; i < len; i++ ) {
+      var draggableElem = draggableElems[i];
+      var draggie = new Draggabilly( draggableElem, {
+        containment: true
+      });
+      draggies.push( draggie );
+    }
+  })();
 };
 
 //FUNCTION TO CREATE ADDITIONAL MAGNET SETS
